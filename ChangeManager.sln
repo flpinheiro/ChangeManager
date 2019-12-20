@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{5D78A2D6-61CF-4761-98AD-2611D271601B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{E6E56CAE-CA54-442D-8C35-F1473DAEA9C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Service", "3 - Service", "{D320C943-52F4-4674-A3C6-22DE4D9D548E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{1B30723C-DCA5-4189-B066-5F4643DC7845}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{531B9F3C-95E0-4763-A39C-54DC25BC75F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cross - Cutting", "Cross - Cutting", "{B217B00A-0A33-4D8B-AA2D-E5B081AE6951}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{4CDA1B52-05EF-481E-BB4E-567718EC126D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CDA1B52-05EF-481E-BB4E-567718EC126D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CDA1B52-05EF-481E-BB4E-567718EC126D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CDA1B52-05EF-481E-BB4E-567718EC126D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CDA1B52-05EF-481E-BB4E-567718EC126D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{531B9F3C-95E0-4763-A39C-54DC25BC75F9} = {1B30723C-DCA5-4189-B066-5F4643DC7845}
+		{B217B00A-0A33-4D8B-AA2D-E5B081AE6951} = {1B30723C-DCA5-4189-B066-5F4643DC7845}
+		{4CDA1B52-05EF-481E-BB4E-567718EC126D} = {E6E56CAE-CA54-442D-8C35-F1473DAEA9C6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D968F682-8748-463E-B49B-480D2859D4EB}
+	EndGlobalSection
+EndGlobal
