@@ -1,8 +1,11 @@
 ﻿@using ChangeManager.Domain.Entities
+@using ChangeManager.Service.Services;
 @model ICollection<Register>
 @{
     ViewData["Title"] = "Register";
+    var registerService = new RegisterService();
 }
+
 
 <h1>Register</h1>
 
@@ -14,25 +17,32 @@
     <h3>Register List</h3>
     <table>
         <thead>
-        <tr>
-            <tH>Name</tH>
-            <th>Total</th>
-            <th>Edit</th>
-            <th>Remove</th>
-        </tr>
+            <tr>
+                <tH>Name</tH>
+                <th>Total</th>
+                <th>Edit</th>
+                <th>Select</th>
+            </tr>
         </thead>
         <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@registerService.TotalValue(item)</td>
+                    <td><a>Edit</a></td>
+                    <td><a asp-action="Get" asp-route-id="@item.Id">Select</a></td>
+                </tr>
+            }
         </tbody>
+        @{var total = Model.Aggregate<Register, uint>(0, (current, register) => current + registerService.TotalValue(register));}
+
         <tfoot>
             <tr>
-                <td></td>
-                <th></th>
+                <td>Total Box Values = </td>
+                <th>
+                    @total
+                </th>
                 <td></td>
                 <td></td>
             </tr>

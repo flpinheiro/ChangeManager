@@ -11,7 +11,7 @@ namespace ChangeManager.Infra.Data.Repository
 {
     public class BaseRepository<T> : IRepository<T> where T: BaseEntity
     {
-        public readonly  ChangeManagerContext _context = new ChangeManagerContext();
+        private readonly  ChangeManagerContext _context = new ChangeManagerContext();
         public void Insert(T obj)
         {
             _context.Set<T>().Add(obj);
@@ -23,7 +23,6 @@ namespace ChangeManager.Infra.Data.Repository
             _context.Entry(obj).State = EntityState.Modified;
             _context.SaveChanges();
         }
-
 
         public void Delete(int id)
         {

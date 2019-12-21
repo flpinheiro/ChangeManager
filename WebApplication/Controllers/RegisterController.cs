@@ -16,11 +16,19 @@ namespace ChangeManager.WebApplication.Controllers
         private readonly BaseService<Register> _service = new BaseService<Register>();
         public IActionResult Index()
         {
-            return View();
+            var register = _service.Get();
+            return View(register);
         }
 
         public IActionResult AddRegister()
         {
+            return View();
+        }
+
+        public IActionResult Details(int id)
+        {
+            var get = Get(id);
+
             return View();
         }
 

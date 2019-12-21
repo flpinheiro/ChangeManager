@@ -151,3 +151,4 @@ D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\WebApplic
 D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\WebApplication\obj\Debug\netcoreapp3.1\ChangeManager.WebApplication.pdb
 D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\WebApplication\obj\Debug\netcoreapp3.1\ChangeManager.WebApplication.MvcApplicationPartsAssemblyInfo.cs
 D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\WebApplication\obj\Debug\netcoreapp3.1\ChangeManager.WebApplication.MvcApplicationPartsAssemblyInfo.cache
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Register\Details.cshtml.g.cs
