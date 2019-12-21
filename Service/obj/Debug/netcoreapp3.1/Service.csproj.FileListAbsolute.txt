@@ -1,0 +1,4 @@
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Service\bin\Debug\netcoreapp3.1\ChangeManager.Service.deps.json
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Service\bin\Debug\netcoreapp3.1\ChangeManager.Service.dll
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfoInputs.cache
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfo.cs

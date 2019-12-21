@@ -1,0 +1,5 @@
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Domain\bin\Debug\netcoreapp3.0\ChangeManager.Domain.deps.json
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Domain\bin\Debug\netcoreapp3.0\ChangeManager.Domain.dll
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Domain\obj\Debug\netcoreapp3.0\Domain.csprojAssemblyReference.cache
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Domain\obj\Debug\netcoreapp3.0\Domain.AssemblyInfoInputs.cache
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Domain\obj\Debug\netcoreapp3.0\Domain.AssemblyInfo.cs

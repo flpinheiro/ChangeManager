@@ -6,4 +6,8 @@
     <RootNamespace>ChangeManager.Domain</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.6.0" />
+  </ItemGroup>
+
 </Project>

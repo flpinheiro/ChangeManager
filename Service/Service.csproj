@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>ChangeManager.Service</RootNamespace>
+    <AssemblyName>ChangeManager.Service</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Infra.CrossCutting\Infra.CrossCutting.csproj" />
+    <ProjectReference Include="..\Infra.Data\Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>
