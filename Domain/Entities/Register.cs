@@ -2,7 +2,7 @@
 
 namespace ChangeManager.Domain.Entities
 {
-    public class Register
+    public class Register : BaseEntity
     {
         public string Name { get; set; }
         public ICollection<RegisterCoin> RegisterCoins { get; set; }

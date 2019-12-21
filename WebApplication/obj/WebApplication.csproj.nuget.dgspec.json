@@ -231,14 +231,14 @@
         }
       }
     },
-    "D:\\flpin\\Documents\\OneDrive\\Documents\\Visual Studio 2019\\ChangeManager\\WebApplication\\WebApplication.csproj": {
+    "D:\\flpin\\Documents\\OneDrive\\Documents\\Visual Studio 2019\\ChangeManager\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\flpin\\Documents\\OneDrive\\Documents\\Visual Studio 2019\\ChangeManager\\WebApplication\\WebApplication.csproj",
-        "projectName": "ChangeManager.WebApplication",
-        "projectPath": "D:\\flpin\\Documents\\OneDrive\\Documents\\Visual Studio 2019\\ChangeManager\\WebApplication\\WebApplication.csproj",
+        "projectUniqueName": "D:\\flpin\\Documents\\OneDrive\\Documents\\Visual Studio 2019\\ChangeManager\\Service\\Service.csproj",
+        "projectName": "ChangeManager.Service",
+        "projectPath": "D:\\flpin\\Documents\\OneDrive\\Documents\\Visual Studio 2019\\ChangeManager\\Service\\Service.csproj",
         "packagesPath": "C:\\Users\\flpin\\.nuget\\packages\\",
-        "outputPath": "D:\\flpin\\Documents\\OneDrive\\Documents\\Visual Studio 2019\\ChangeManager\\WebApplication\\obj\\",
+        "outputPath": "D:\\flpin\\Documents\\OneDrive\\Documents\\Visual Studio 2019\\ChangeManager\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Microsoft\\Xamarin\\NuGet\\"
@@ -279,6 +279,84 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[8.6.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\flpin\\Documents\\OneDrive\\Documents\\Visual Studio 2019\\ChangeManager\\WebApplication\\WebApplication.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\flpin\\Documents\\OneDrive\\Documents\\Visual Studio 2019\\ChangeManager\\WebApplication\\WebApplication.csproj",
+        "projectName": "ChangeManager.WebApplication",
+        "projectPath": "D:\\flpin\\Documents\\OneDrive\\Documents\\Visual Studio 2019\\ChangeManager\\WebApplication\\WebApplication.csproj",
+        "packagesPath": "C:\\Users\\flpin\\.nuget\\packages\\",
+        "outputPath": "D:\\flpin\\Documents\\OneDrive\\Documents\\Visual Studio 2019\\ChangeManager\\WebApplication\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\flpin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\flpin\\Documents\\OneDrive\\Documents\\Visual Studio 2019\\ChangeManager\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\flpin\\Documents\\OneDrive\\Documents\\Visual Studio 2019\\ChangeManager\\Domain\\Domain.csproj"
+              },
+              "D:\\flpin\\Documents\\OneDrive\\Documents\\Visual Studio 2019\\ChangeManager\\Infra.CrossCutting\\Infra.CrossCutting.csproj": {
+                "projectPath": "D:\\flpin\\Documents\\OneDrive\\Documents\\Visual Studio 2019\\ChangeManager\\Infra.CrossCutting\\Infra.CrossCutting.csproj"
+              },
+              "D:\\flpin\\Documents\\OneDrive\\Documents\\Visual Studio 2019\\ChangeManager\\Infra.Data\\Infra.Data.csproj": {
+                "projectPath": "D:\\flpin\\Documents\\OneDrive\\Documents\\Visual Studio 2019\\ChangeManager\\Infra.Data\\Infra.Data.csproj"
+              },
+              "D:\\flpin\\Documents\\OneDrive\\Documents\\Visual Studio 2019\\ChangeManager\\Service\\Service.csproj": {
+                "projectPath": "D:\\flpin\\Documents\\OneDrive\\Documents\\Visual Studio 2019\\ChangeManager\\Service\\Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.0, )"
@@ -291,11 +369,25 @@
               "target": "Package",
               "version": "[3.1.0, )"
             },
+            "Microsoft.CodeAnalysis.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.9.8, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.0, )"
             }

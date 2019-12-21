@@ -19,14 +19,28 @@ namespace ChangeManager.Infra.Data.Mapping
                 .IsRequired()
                 .HasColumnName("value");
 
-            builder.Property(c => c.Quantity)
-                .IsRequired()
-                .HasColumnName("quantity");
-
             builder.HasMany(c => c.RegisterCoins)
                 .WithOne(rc => rc.Coin)
                 .HasForeignKey(rc => rc.CoinId)
                 .OnDelete(deleteBehavior: DeleteBehavior.Cascade);
+            
+            builder.HasAlternateKey(c => c.Value).HasName("coin_value_key");
+
+            builder.HasData(new List<Coin>()
+            {
+                new Coin(){Id=1,Value = 1},//um centavo
+                new Coin(){Id=2,Value = 5},//5 centavo
+                new Coin(){Id=3,Value = 10},//10 centavo
+                new Coin(){Id=4,Value = 25},//25 centavo
+                new Coin(){Id=5,Value = 50},//50 centavo
+                new Coin(){Id=6,Value = 100},//1 real
+                new Coin(){Id=7,Value = 200},//2 real
+                new Coin(){Id=8,Value = 500},//5 real
+                new Coin(){Id=9,Value = 1000},//10 real
+                new Coin(){Id=10,Value = 2000},//20 real
+                new Coin(){Id=11,Value = 5000},//50 real
+                new Coin(){Id=12,Value = 10000},//100 real
+            });
         }
     }
 }

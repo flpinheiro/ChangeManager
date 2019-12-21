@@ -18,10 +18,6 @@ namespace ChangeManager.Service.Validators
             RuleFor(c => c.Value)
                 .NotNull().WithMessage("Must have value.")
                 .NotEmpty().WithMessage("Must have value");
-
-            RuleFor(c => c.Quantity)
-                .NotNull().WithMessage("Must have quantity")
-                .NotEmpty().WithMessage("must have quantity");
         }
     }
 }

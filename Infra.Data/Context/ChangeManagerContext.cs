@@ -15,7 +15,7 @@ namespace ChangeManager.Infra.Data.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
-                optionsBuilder.UseMySql(connectionString:"Server=[SERVIDOR];Port=[PORTA];Database=modelo;Uid=[USUARIO];Pwd=[SENHA]");
+                optionsBuilder.UseMySql(connectionString: "Server=localhost;Port=3306;Database=change_manager;Uid=root;Pwd=VisualStudio.Net3");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

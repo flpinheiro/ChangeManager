@@ -1,4 +1,15 @@
 D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Service\bin\Debug\netcoreapp3.1\ChangeManager.Service.deps.json
 D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Service\bin\Debug\netcoreapp3.1\ChangeManager.Service.dll
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Service\bin\Debug\netcoreapp3.1\ChangeManager.Service.pdb
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Service\bin\Debug\netcoreapp3.1\ChangeManager.Domain.dll
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Service\bin\Debug\netcoreapp3.1\ChangeManager.Infra.CrossCutting.dll
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Service\bin\Debug\netcoreapp3.1\ChangeManager.Infra.Data.dll
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Service\bin\Debug\netcoreapp3.1\ChangeManager.Domain.pdb
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Service\bin\Debug\netcoreapp3.1\ChangeManager.Infra.CrossCutting.pdb
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Service\bin\Debug\netcoreapp3.1\ChangeManager.Infra.Data.pdb
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Service\obj\Debug\netcoreapp3.1\Service.csprojAssemblyReference.cache
 D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfoInputs.cache
 D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfo.cs
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Service\obj\Debug\netcoreapp3.1\Service.csproj.CopyComplete
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Service\obj\Debug\netcoreapp3.1\ChangeManager.Service.dll
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Service\obj\Debug\netcoreapp3.1\ChangeManager.Service.pdb

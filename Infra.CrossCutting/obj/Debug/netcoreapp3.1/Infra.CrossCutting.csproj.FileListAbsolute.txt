@@ -1,0 +1,11 @@
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Infra.CrossCutting\bin\Debug\netcoreapp3.1\ChangeManager.Infra.CrossCutting.deps.json
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Infra.CrossCutting\bin\Debug\netcoreapp3.1\ChangeManager.Infra.CrossCutting.dll
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Infra.CrossCutting\bin\Debug\netcoreapp3.1\ChangeManager.Infra.CrossCutting.pdb
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Infra.CrossCutting\bin\Debug\netcoreapp3.1\ChangeManager.Domain.dll
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Infra.CrossCutting\bin\Debug\netcoreapp3.1\ChangeManager.Domain.pdb
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Infra.CrossCutting\obj\Debug\netcoreapp3.1\Infra.CrossCutting.csprojAssemblyReference.cache
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Infra.CrossCutting\obj\Debug\netcoreapp3.1\Infra.CrossCutting.AssemblyInfoInputs.cache
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Infra.CrossCutting\obj\Debug\netcoreapp3.1\Infra.CrossCutting.AssemblyInfo.cs
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Infra.CrossCutting\obj\Debug\netcoreapp3.1\Infra.CrossCutting.csproj.CopyComplete
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Infra.CrossCutting\obj\Debug\netcoreapp3.1\ChangeManager.Infra.CrossCutting.dll
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\Infra.CrossCutting\obj\Debug\netcoreapp3.1\ChangeManager.Infra.CrossCutting.pdb

@@ -11,7 +11,7 @@ namespace ChangeManager.Infra.Data.Repository
 {
     public class BaseRepository<T> : IRepository<T> where T: BaseEntity
     {
-        private readonly  ChangeManagerContext _context = new ChangeManagerContext();
+        public readonly  ChangeManagerContext _context = new ChangeManagerContext();
         public void Insert(T obj)
         {
             _context.Set<T>().Add(obj);

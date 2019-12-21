@@ -10,7 +10,7 @@ namespace ChangeManager.Service.Services
 {
     public class BaseService<T> : IService<T> where T: BaseEntity
     {
-        private readonly  BaseRepository<T> _repository = new BaseRepository<T>();
+        protected readonly  BaseRepository<T> _repository = new BaseRepository<T>();
         public T Post<TV>(T obj) where TV : AbstractValidator<T>
         {
             Validate(obj,Activator.CreateInstance<TV>());
