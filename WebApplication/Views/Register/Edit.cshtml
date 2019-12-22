@@ -1,5 +1,7 @@
-﻿@using ChangeManager.Domain.Entities
+﻿@using System.Reflection.Metadata.Ecma335
+@using ChangeManager.Domain.Entities
 @using ChangeManager.Service.Services
+@using ChangeManager.WebApplication.Controllers
 @model Register
 
 @{
@@ -8,13 +10,14 @@
     var index = 0;
 }
 
+
 <h1>Edit</h1>
 
 <h4>Register</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="Edit" onsubmit="@RegisterController.QuantityList(quantityList)">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
