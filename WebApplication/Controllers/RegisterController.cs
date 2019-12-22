@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ChangeManager.WebApplication.Controllers
@@ -19,6 +20,11 @@ namespace ChangeManager.WebApplication.Controllers
         
         public IActionResult Index()
         {
+            var r = _service.Get();
+            foreach (var item in r)
+            {
+                item.RegisterCoins = _service.GetRegisterCoins(item.Id);
+            }
             return View(_service.Get());
         }
 
@@ -50,7 +56,7 @@ namespace ChangeManager.WebApplication.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,RegisterCoins")] Register register)
+        public IActionResult Edit(int id, [Bind("Id,Name,RegisterCoins")] Register register)
         {
             if (id != register.Id)
             {

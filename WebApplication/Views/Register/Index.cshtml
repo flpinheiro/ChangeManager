@@ -3,7 +3,6 @@
 @model ICollection<Register>
 @{
     ViewData["Title"] = "Register";
-    var registerService = new RegisterService();
 }
 
 
@@ -29,13 +28,13 @@
             {
                 <tr>
                     <td>@item.Name</td>
-                    <td>@registerService.TotalValue(item)</td>
-                    <td> <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |</td>
+                    <td>@RegisterService.TotalValue(item)</td>
+                    <td><a asp-action="Edit" asp-route-id="@item.Id">Edit</a>|</td>
                     <td><a asp-action="Details" asp-route-id="@item.Id">Select</a></td>
                 </tr>
             }
         </tbody>
-        @{var total = Model.Aggregate<Register, int>(0, (current, register) => current + registerService.TotalValue(register));}
+        @{var total = Model.Aggregate<Register, int>(0, (current, register) => current + RegisterService.TotalValue(register));}
 
         <tfoot>
             <tr>

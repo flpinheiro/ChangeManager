@@ -11,22 +11,25 @@
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <fieldset>
             <legend>Change Manager</legend>
-            <label asp-for="ValuePaid">
+            <label asp-for="ValuePaid" class="control-label">
                 Value Paid:
                 <input type="number" asp-for="ValuePaid" autofocus min="0" required>
+                <span asp-validation-for="ValuePaid" class="text-danger"></span>
             </label>
             <br>
             <label asp-for="TotalValue">
                 Total Value:
                 <input type="number" asp-for="TotalValue" min="0" required>
+                <span asp-validation-for="TotalValue" class="text-danger"></span>
             </label>
             <br>
             <br />
-            @*<label asp-for="RegisterId">
+            <label asp-for="RegisterId">
                 Select Register To Pay:
-                <select asp-for="RegisterId" asp-items="@ViewBag.Register" required >
+                <select asp-for="RegisterId" asp-items="@ViewBag.Register" required>
                 </select>
-            </label>*@
+                <span asp-validation-for="RegisterId" class="text-danger"></span>
+            </label>
             <div class="form-group">
                 <input type="submit" value="Calculate" class="btn btn-primary" />
             </div>

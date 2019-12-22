@@ -1,7 +1,50 @@
-﻿
+﻿@using ChangeManager.Domain.Entities
+@using ChangeManager.Service.Services
+@model ICollection<RegisterCoin>
 @{
     ViewData["Title"] = "CalculateChange";
 }
 
 <h1>CalculateChange</h1>
 
+
+@if (Model == null)
+{
+    <p>No Change</p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Coin Value</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    @if (item.Coin.Value < 100)
+                    {
+                        <td>@item.Coin.Value Centavos</td>
+                    }
+                    else
+                    {
+                        <td>R$ @(item.Coin.Value / 100)</td>
+                    }
+                    <td>@item.Quantity</td>
+                </tr>
+            }
+        </tbody>
+        @{var total =  RegisterService.TotalValue(Model);}
+        <tfoot>
+            <tr>
+                <th>Total</th>
+                <th>R$ @total</th>
+            </tr>
+        </tfoot>
+    </table>
+}

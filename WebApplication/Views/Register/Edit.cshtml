@@ -2,20 +2,6 @@
 @using ChangeManager.Service.Services
 @model Register
 
-@functions {
-    private bool ValidationFunction(IEnumerable<RegisterCoin> rc, IReadOnlyList<int> quantityList)
-    {
-        var index = 0;
-        foreach (var item in rc)
-        {
-            item.Quantity += quantityList[index];
-            index++;
-        }
-        return true;
-    }
-
-}
-
 @{
     ViewData["Title"] = "Edit";
     var quantityList = new int[Model.RegisterCoins.Count];
@@ -28,7 +14,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit" onsubmit="@{ValidationFunction(Model.RegisterCoins, quantityList); }">
+        <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
@@ -67,7 +53,7 @@
                         index++;
                     }
                 </tbody>
-                @{var total = new RegisterService().TotalValue(Model);}
+                @{var total = RegisterService.TotalValue(Model);}
                 <tfoot>
                     <tr>
                         <td>Total</td>
