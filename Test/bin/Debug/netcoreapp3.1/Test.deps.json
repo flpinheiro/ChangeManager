@@ -2215,6 +2215,7 @@
           "ChangeManager.Infra.CrossCutting": "1.0.0",
           "ChangeManager.Infra.Data": "1.0.0",
           "ChangeManager.Service": "1.0.0",
+          "MSTest.TestFramework": "2.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "3.1.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.0",
           "Microsoft.AspNetCore.Identity.UI": "3.1.0",

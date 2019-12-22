@@ -149,6 +149,10 @@ D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\WebApplic
 D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\WebApplication\obj\Debug\netcoreapp3.1\WebApplication.csproj.CopyComplete
 D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\WebApplication\obj\Debug\netcoreapp3.1\ChangeManager.WebApplication.dll
 D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\WebApplication\obj\Debug\netcoreapp3.1\ChangeManager.WebApplication.pdb
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Register\Details.cshtml.g.cs
 D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\WebApplication\obj\Debug\netcoreapp3.1\ChangeManager.WebApplication.MvcApplicationPartsAssemblyInfo.cs
 D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\WebApplication\obj\Debug\netcoreapp3.1\ChangeManager.WebApplication.MvcApplicationPartsAssemblyInfo.cache
-D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Register\Details.cshtml.g.cs
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\WebApplication\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\WebApplication\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Change\Index.cshtml.g.cs
+D:\flpin\Documents\OneDrive\Documents\Visual Studio 2019\ChangeManager\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Change\CalculateChange.cshtml.g.cs

@@ -17,6 +17,10 @@ namespace ChangeManager.Service.Validators
             RuleFor(c => c.Name)
                 .NotNull().WithMessage("Must Have Name")
                 .NotEmpty().WithMessage("Must Have Name");
+
+            RuleFor(c => c.RegisterCoins)
+                .NotNull()
+                .NotEmpty();
         }
     }
 }

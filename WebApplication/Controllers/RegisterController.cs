@@ -8,16 +8,17 @@ using ChangeManager.Service.Validators;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ChangeManager.WebApplication.Controllers
 {
+
     public class RegisterController : Controller
     {
         private readonly BaseService<Register> _service = new BaseService<Register>();
         public IActionResult Index()
         {
-            var register = _service.Get();
-            return View(register);
+            return View(_service.Get());
         }
 
         public IActionResult AddRegister()
@@ -25,11 +26,32 @@ namespace ChangeManager.WebApplication.Controllers
             return View();
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public  IActionResult AddRegister([Bind("Id,Name")] Register register)
+        {
+            if (!ModelState.IsValid) return View(register);
+
+            var coinList = new BaseService<Coin>().Get();
+            register.RegisterCoins = new List<RegisterCoin>();
+            foreach (var coin in coinList)
+            {
+                register.RegisterCoins.Add(new RegisterCoin()
+                {
+                    Quantity = 0,
+                    CoinId = coin.Id,
+                    //Coin = coin
+                });
+            }
+
+            Post(register);
+            //await context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
         public IActionResult Details(int id)
         {
-            var get = Get(id);
-
-            return View();
+            return View(_service.Get(id));
         }
 
         public IActionResult Post([FromBody] Register item)

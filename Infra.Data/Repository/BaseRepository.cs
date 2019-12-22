@@ -11,28 +11,28 @@ namespace ChangeManager.Infra.Data.Repository
 {
     public class BaseRepository<T> : IRepository<T> where T: BaseEntity
     {
-        private readonly  ChangeManagerContext _context = new ChangeManagerContext();
+        public readonly  ChangeManagerContext Context = new ChangeManagerContext();
         public void Insert(T obj)
         {
-            _context.Set<T>().Add(obj);
-            _context.SaveChanges();
+            Context.Set<T>().Add(obj);
+            Context.SaveChanges();
         }
 
         public void Update(T obj)
         {
-            _context.Entry(obj).State = EntityState.Modified;
-            _context.SaveChanges();
+            Context.Entry(obj).State = EntityState.Modified;
+            Context.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            _context.Set<T>().Remove(Select(id));
-            _context.SaveChanges();
+            Context.Set<T>().Remove(Select(id));
+            Context.SaveChanges();
 
         }
 
-        public T Select(int id) => _context.Set<T>().Find(id);
+        public T Select(int id) => Context.Set<T>().Find(id);
 
-        public IList<T> SelectAll() => _context.Set<T>().ToList();
+        public IList<T> SelectAll() => Context.Set<T>().ToList();
     }
 }

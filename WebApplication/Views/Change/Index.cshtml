@@ -1,0 +1,38 @@
+﻿@using ChangeManager.Domain.Entities;
+@model Change;
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Change</h1>
+
+<div>
+    <form asp-action="CalculateChange" method="post" asp-controller="Change">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <fieldset>
+            <legend>Change Manager</legend>
+            <label asp-for="ValuePaid">
+                Value Paid:
+                <input type="number" asp-for="ValuePaid" autofocus min="0" required>
+            </label>
+            <br>
+            <label asp-for="TotalValue">
+                Total Value:
+                <input type="number" asp-for="TotalValue" min="0" required>
+            </label>
+            <br>
+            <br />
+            <label asp-for="RegisterId">
+                Select Register To Pay:
+                <select asp-for="RegisterId" asp-items="@ViewBag.Register">
+                </select>
+            </label>
+            <div class="form-group">
+                <input type="submit" value="Calculate" class="btn btn-primary" />
+            </div>
+
+        </fieldset>
+
+    </form>
+</div>
+
