@@ -47,7 +47,7 @@
                             <td>@item.Quantity</td>
                             <td>
                                 @{ var idName = $"quantity_list_{index}";}
-                                <input value="@quantityList[index]" type="number" min="-@item.Quantity" id="@idName" />
+                                <input name="quantityList" value="@quantityList[index]" type="number" min="-@item.Quantity" id="@idName" />
                             </td>
                         </tr>
                         index++;
