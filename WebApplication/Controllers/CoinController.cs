@@ -12,7 +12,7 @@ namespace ChangeManager.WebApplication.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class CoinController : ControllerBase
+    public class CoinController : Controller
     {
         private readonly BaseService<Coin> _service = new BaseService<Coin>();
 

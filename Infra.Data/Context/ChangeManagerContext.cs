@@ -12,6 +12,7 @@ namespace ChangeManager.Infra.Data.Context
     {
         public DbSet<Coin> Coins { get; set; }
         public DbSet<Register> Registers { get; set; }
+        public DbSet<RegisterCoin> RegisterCoins { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

@@ -1,5 +1,5 @@
-﻿@using ChangeManager.Domain.Entities;
-@model Change;
+﻿@using ChangeManager.Domain.Entities
+@model Change
 @{
     ViewData["Title"] = "Index";
 }
@@ -22,11 +22,11 @@
             </label>
             <br>
             <br />
-            <label asp-for="RegisterId">
+            @*<label asp-for="RegisterId">
                 Select Register To Pay:
-                <select asp-for="RegisterId" asp-items="@ViewBag.Register">
+                <select asp-for="RegisterId" asp-items="@ViewBag.Register" required >
                 </select>
-            </label>
+            </label>*@
             <div class="form-group">
                 <input type="submit" value="Calculate" class="btn btn-primary" />
             </div>

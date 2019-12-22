@@ -10,10 +10,19 @@ namespace ChangeManager.Service.Services
     public class RegisterService : BaseService<Register>
     {
 
-        public uint TotalValue(Register register)
+        public int TotalValue(Register register)
         {
             return register.RegisterCoins
-                .Aggregate<RegisterCoin, uint>(0, (current, item) => current + item.Quantity * item.Coin.Value);
+                .Aggregate<RegisterCoin, int>(0, (current, item) => current + item.Quantity * item.Coin.Value);
         }
+
+        public ICollection<RegisterCoin> GetRegisterCoins(int id)
+            => _repository
+                .Context
+                .RegisterCoins
+                .Where(x => x.RegisterId == id)
+                .Include(c => c.Coin)
+                .ToList();
+
     }
 }

@@ -7,15 +7,16 @@ using ChangeManager.Service.Services;
 using ChangeManager.Service.Validators;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ChangeManager.WebApplication.Controllers
 {
-
     public class RegisterController : Controller
     {
-        private readonly BaseService<Register> _service = new BaseService<Register>();
+        private readonly RegisterService _service = new RegisterService();
+        
         public IActionResult Index()
         {
             return View(_service.Get());
@@ -24,6 +25,42 @@ namespace ChangeManager.WebApplication.Controllers
         public IActionResult AddRegister()
         {
             return View();
+        }
+
+        public IActionResult Edit(int? id)
+        {
+
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var register =  _service.Get(id??0);
+            if (register == null)
+            {
+                return NotFound();
+            }
+
+            if (register.RegisterCoins.Count == 0)
+            {
+                register.RegisterCoins = _service.GetRegisterCoins(id ?? 0);
+            }
+            return View(register);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,RegisterCoins")] Register register)
+        {
+            if (id != register.Id)
+            {
+                return NotFound();
+            }
+
+            if (!ModelState.IsValid) return View(register);
+
+            Put(register);
+            return RedirectToAction(nameof(Index));
         }
 
         [HttpPost]
@@ -40,10 +77,8 @@ namespace ChangeManager.WebApplication.Controllers
                 {
                     Quantity = 0,
                     CoinId = coin.Id,
-                    //Coin = coin
                 });
             }
-
             Post(register);
             //await context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

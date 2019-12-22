@@ -11,6 +11,8 @@ namespace ChangeManager.Infra.Data.Mapping
     {
         public void Configure(EntityTypeBuilder<RegisterCoin> builder)
         {
+            builder.ToTable("register_coin");
+
             builder.HasKey(rc => new {rc.RegisterId, rc.CoinId});
 
             builder.Property(c => c.Quantity)
@@ -43,8 +45,6 @@ namespace ChangeManager.Infra.Data.Mapping
                 new RegisterCoin(){CoinId = 10, RegisterId = 2, Quantity = 0},
                 new RegisterCoin(){CoinId = 11, RegisterId = 2, Quantity = 0},
                 new RegisterCoin(){CoinId = 12, RegisterId = 2, Quantity = 0},
-
-
             });
         }
     }

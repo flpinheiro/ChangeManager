@@ -70,13 +70,13 @@ namespace Test
         [TestMethod]
         public void TotalValue1()
         {
-            Assert.AreEqual(0u,rs.TotalValue(r));
+            Assert.AreEqual(0,rs.TotalValue(r));
         }
 
         [TestMethod]
         public void TotalValue2()
         {
-            Assert.AreEqual(410u,rs.TotalValue(r2));
+            Assert.AreEqual(410,rs.TotalValue(r2));
         }
     }
 }

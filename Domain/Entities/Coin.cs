@@ -6,7 +6,7 @@ namespace ChangeManager.Domain.Entities
     public class Coin: BaseEntity
     {
         [Required]
-        public uint Value { get; set; }
+        public int Value { get; set; }
 
         public ICollection<RegisterCoin> RegisterCoins { get; set; }
 

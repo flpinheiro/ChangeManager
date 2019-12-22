@@ -6,7 +6,7 @@ using FluentValidation;
 
 namespace ChangeManager.Domain.Interfaces
 {
-    public interface IService<T> where T : BaseEntity 
+    public interface IService<T>
     {
         T Post<V>(T obj) where V : AbstractValidator<T>;
 

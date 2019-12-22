@@ -1,0 +1,87 @@
+﻿@using ChangeManager.Domain.Entities
+@using ChangeManager.Service.Services
+@model Register
+
+@functions {
+    private bool ValidationFunction(IEnumerable<RegisterCoin> rc, IReadOnlyList<int> quantityList)
+    {
+        var index = 0;
+        foreach (var item in rc)
+        {
+            item.Quantity += quantityList[index];
+            index++;
+        }
+        return true;
+    }
+
+}
+
+@{
+    ViewData["Title"] = "Edit";
+    var quantityList = new int[Model.RegisterCoins.Count];
+    var index = 0;
+}
+
+<h1>Edit</h1>
+
+<h4>Register</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" onsubmit="@{ValidationFunction(Model.RegisterCoins, quantityList); }">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" disabled />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Id" />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Coin Value</th>
+                        <th>Quantity</th>
+                        <th>Quantity to Add or Remove</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model.RegisterCoins)
+                    {
+                        <tr>
+
+                            @if (item.Coin.Value < 100)
+                            {
+                                <td>@item.Coin.Value Centavos</td>
+                            }
+                            else
+                            {
+                                <td>R$ @(item.Coin.Value / 100)</td>
+                            }
+                            <td>@item.Quantity</td>
+                            <td>
+                                @{ var idName = $"quantity_list_{index}";}
+                                <input value="@quantityList[index]" type="number" min="-@item.Quantity" id="@idName" />
+                            </td>
+                        </tr>
+                        index++;
+                    }
+                </tbody>
+                @{var total = new RegisterService().TotalValue(Model);}
+                <tfoot>
+                    <tr>
+                        <td>Total</td>
+                        <td>@total</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

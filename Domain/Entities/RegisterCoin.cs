@@ -10,6 +10,6 @@ namespace ChangeManager.Domain.Entities
         public Register Register { get; set; }
 
         [Required]
-        public uint Quantity { get; set; }
+        public int Quantity { get; set; }
     }
 }

@@ -1,5 +1,5 @@
-﻿@model ChangeManager.Domain.Entities.Register
-
+﻿@using ChangeManager.Domain.Entities
+@model Register
 @{
     ViewData["Title"] = "View";
 }
@@ -10,7 +10,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="AddRegister" method="post" asp-controller="Register" >
+        <form asp-action="AddRegister" method="post" asp-controller="Register">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
@@ -18,7 +18,7 @@
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="AddRegister" class="btn btn-primary"/>
+                <input type="submit" value="AddRegister" class="btn btn-primary" />
             </div>
         </form>
     </div>

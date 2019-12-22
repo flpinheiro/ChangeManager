@@ -22,9 +22,9 @@ namespace ChangeManager.Infra.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<uint>("Value")
+                    b.Property<int>("Value")
                         .HasColumnName("value")
-                        .HasColumnType("int unsigned");
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -37,62 +37,62 @@ namespace ChangeManager.Infra.Data.Migrations
                         new
                         {
                             Id = 1,
-                            Value = 1u
+                            Value = 1
                         },
                         new
                         {
                             Id = 2,
-                            Value = 5u
+                            Value = 5
                         },
                         new
                         {
                             Id = 3,
-                            Value = 10u
+                            Value = 10
                         },
                         new
                         {
                             Id = 4,
-                            Value = 25u
+                            Value = 25
                         },
                         new
                         {
                             Id = 5,
-                            Value = 50u
+                            Value = 50
                         },
                         new
                         {
                             Id = 6,
-                            Value = 100u
+                            Value = 100
                         },
                         new
                         {
                             Id = 7,
-                            Value = 200u
+                            Value = 200
                         },
                         new
                         {
                             Id = 8,
-                            Value = 500u
+                            Value = 500
                         },
                         new
                         {
                             Id = 9,
-                            Value = 1000u
+                            Value = 1000
                         },
                         new
                         {
                             Id = 10,
-                            Value = 2000u
+                            Value = 2000
                         },
                         new
                         {
                             Id = 11,
-                            Value = 5000u
+                            Value = 5000
                         },
                         new
                         {
                             Id = 12,
-                            Value = 10000u
+                            Value = 10000
                         });
                 });
 
@@ -132,160 +132,160 @@ namespace ChangeManager.Infra.Data.Migrations
                     b.Property<int>("CoinId")
                         .HasColumnType("int");
 
-                    b.Property<uint>("Quantity")
+                    b.Property<int>("Quantity")
                         .HasColumnName("quantity")
-                        .HasColumnType("int unsigned");
+                        .HasColumnType("int");
 
                     b.HasKey("RegisterId", "CoinId");
 
                     b.HasIndex("CoinId");
 
-                    b.ToTable("RegisterCoin");
+                    b.ToTable("register_coin");
 
                     b.HasData(
                         new
                         {
                             RegisterId = 1,
                             CoinId = 1,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 1,
                             CoinId = 2,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 1,
                             CoinId = 3,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 1,
                             CoinId = 4,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 1,
                             CoinId = 5,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 1,
                             CoinId = 6,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 1,
                             CoinId = 7,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 1,
                             CoinId = 8,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 1,
                             CoinId = 9,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 1,
                             CoinId = 10,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 1,
                             CoinId = 11,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 1,
                             CoinId = 12,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 2,
                             CoinId = 1,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 2,
                             CoinId = 2,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 2,
                             CoinId = 3,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 2,
                             CoinId = 4,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 2,
                             CoinId = 5,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 2,
                             CoinId = 6,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 2,
                             CoinId = 7,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 2,
                             CoinId = 8,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 2,
                             CoinId = 9,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 2,
                             CoinId = 10,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 2,
                             CoinId = 11,
-                            Quantity = 0u
+                            Quantity = 0
                         },
                         new
                         {
                             RegisterId = 2,
                             CoinId = 12,
-                            Quantity = 0u
+                            Quantity = 0
                         });
                 });
 
