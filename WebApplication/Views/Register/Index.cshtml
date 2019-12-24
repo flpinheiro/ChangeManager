@@ -20,7 +20,7 @@
                 <tH>Name</tH>
                 <th>Total</th>
                 <th>Edit</th>
-                <th>Select</th>
+
             </tr>
         </thead>
         <tbody>
@@ -28,9 +28,8 @@
             {
                 <tr>
                     <td>@item.Name</td>
-                    <td>@RegisterService.TotalValue(item)</td>
+                    <td>R$ @((decimal)RegisterService.TotalValue(item)/100)</td>
                     <td><a asp-action="Edit" asp-route-id="@item.Id">Edit</a>|</td>
-                    <td><a asp-action="Details" asp-route-id="@item.Id">Select</a></td>
                 </tr>
             }
         </tbody>
@@ -40,9 +39,8 @@
             <tr>
                 <td>Total Box Values = </td>
                 <th>
-                    @total
+                    R$ @((decimal)total/100)
                 </th>
-                <td></td>
                 <td></td>
             </tr>
         </tfoot>

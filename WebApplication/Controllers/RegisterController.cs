@@ -56,7 +56,10 @@ namespace ChangeManager.WebApplication.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, [Bind("Id,Name,RegisterCoins")] Register register)
+        public IActionResult Edit(int id, [Bind("Id,Name,RegisterCoins")] Register register, 
+            //[FromBody] ICollection<RegisterCoin> quantityRegisterCoins
+            int[] list
+            )
         {
             if (id != register.Id)
             {
@@ -65,7 +68,22 @@ namespace ChangeManager.WebApplication.Controllers
 
             if (!ModelState.IsValid) return View(register);
 
+            if (register.RegisterCoins == null || register.RegisterCoins.Count==0)
+            {
+                register.RegisterCoins = _service.GetRegisterCoins(register.Id);
+            }
+
+            var index = 0;
+            foreach (var registerCoin in register.RegisterCoins)
+            {
+                registerCoin.Quantity += list[index];
+                if(registerCoin.Quantity < 0) throw  new ArgumentOutOfRangeException("Quantity can't be negative.");
+                index++;
+                _service.Repository.Context.RegisterCoins.Update(registerCoin);
+            }
+
             Put(register);
+            _service.Repository.Context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
 

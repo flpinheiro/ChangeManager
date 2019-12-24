@@ -15,7 +15,7 @@ namespace ChangeManager.Service.Services
 
 
         public ICollection<RegisterCoin> GetRegisterCoins(int id)
-            => _repository
+            => Repository
                 .Context
                 .RegisterCoins
                 .Where(x => x.RegisterId == id)
