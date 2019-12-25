@@ -50,3 +50,6 @@ Requisitos de Negócio:
     iii.  Caso falte moeda deve exibir uma mensagem e bloquear a operação.
 
   e.  Deve ter persistência de dados
+  
+  
+  Aplicação desenvolvida em c\# usando aps.net mvc como frontend. Foi usado mysql como banco de dados principal e migration para realzar a constução do banco de dados. 
