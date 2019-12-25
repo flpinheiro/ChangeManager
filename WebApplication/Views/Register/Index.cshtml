@@ -14,7 +14,7 @@
 
 <div>
     <h3>Register List</h3>
-    <table>
+    <table class="table">
         <thead>
             <tr>
                 <tH>Name</tH>
@@ -29,7 +29,7 @@
                 <tr>
                     <td>@item.Name</td>
                     <td>R$ @((decimal)RegisterService.TotalValue(item)/100)</td>
-                    <td><a asp-action="Edit" asp-route-id="@item.Id">Edit</a>|</td>
+                    <td><a asp-action="Edit" asp-route-id="@item.Id">Edit</a></td>
                 </tr>
             }
         </tbody>
