@@ -1,12 +1,9 @@
-﻿@using System.Reflection.Metadata.Ecma335
-@using ChangeManager.Domain.Entities
-@using ChangeManager.Service.Services
-@using ChangeManager.WebApplication.Controllers
-@model Register
+﻿@using ChangeManager.Service.Services
+@model ChangeManager.Domain.Entities.Register
 
 @{
     ViewData["Title"] = "Edit";
-    var quantityList = new int[Model.RegisterCoins.Count];
+    var list = new int[Model.RegisterCoins.Count];
     var index = 0;
 }
 
@@ -25,12 +22,13 @@
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <input type="hidden" asp-for="Id" />
-            <table>
+            <table class="table">
                 <thead>
                     <tr>
                         <th>Coin Value</th>
                         <th>Quantity</th>
                         <th>Quantity to Add or Remove</th>
+                        <th></th>
                     </tr>
                 </thead>
 
@@ -47,16 +45,28 @@
                             {
                                 <td>R$ @(item.Coin.Value / 100)</td>
                             }
-                            <td>@item.Quantity</td>
                             <td>
-                                @{ var idName = $"quantity_list_{index}";}
-                                <input name="quantityList" value="@quantityList[index]" type="number" min="-@item.Quantity" id="@idName" />
+                                @item.Quantity
+                            </td>
+                            <td>
+                                @{ var idName = $"quantity_list_{index}"; }
+                                <input asp-for="@list[index]" value="@list[index]" type="number" min="-@item.Quantity" id="@idName" />
+                            </td>
+                            <td>
+                                <button onclick="add(event, @index, 1)">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </td>
+                            <td>
+                                <button onclick="add(event, @index, -1)">
+                                    <i class="fas fa-minus"></i>
+                                </button>
                             </td>
                         </tr>
                         index++;
                     }
                 </tbody>
-                @{var total = RegisterService.TotalValue(Model);}
+                @{ var total = RegisterService.TotalValue(Model); }
                 <tfoot>
                     <tr>
                         <td>Total</td>
@@ -74,3 +84,19 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
+
+
+<script type="text/javascript">
+    function add(event, id, signal) {
+        event.preventDefault();
+        var tag = document.getElementById(`quantity_list_${id}`);
+        tag.value = parseInt(tag.value) + parseInt(signal);
+        if (parseInt(tag.value) < parseInt(tag.min)) {
+            tag.value = tag.min;
+        }
+    }
+</script>
+
+<script type="text/C#">
+
+</script>

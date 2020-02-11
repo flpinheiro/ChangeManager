@@ -10,19 +10,19 @@ namespace ChangeManager.Service.Services
 {
     public class BaseService<T> : IService<T> where T: BaseEntity
     {
-        protected readonly  BaseRepository<T> _repository = new BaseRepository<T>();
+        public readonly  BaseRepository<T> Repository = new BaseRepository<T>();
         public T Post<TV>(T obj) where TV : AbstractValidator<T>
         {
             Validate(obj,Activator.CreateInstance<TV>());
 
-            _repository.Insert(obj);
+            Repository.Insert(obj);
             return obj;
         }
 
         public T Put<TV>(T obj) where TV : AbstractValidator<T>
         {
             Validate(obj, Activator.CreateInstance<TV>());
-            _repository.Update(obj);
+            Repository.Update(obj);
             return obj;
         }
 
@@ -31,7 +31,7 @@ namespace ChangeManager.Service.Services
             if(id == 0)
                 throw  new ArgumentException("The id can't be zero.");
 
-            _repository.Delete(id);
+            Repository.Delete(id);
         }
 
         public T Get(int id)
@@ -39,10 +39,10 @@ namespace ChangeManager.Service.Services
             if(id == 0 )
                 throw  new ArgumentException("The id can't be null");
 
-            return _repository.Select(id);
+            return Repository.Select(id);
         }
 
-        public IList<T> Get() => _repository.SelectAll();
+        public IList<T> Get() => Repository.SelectAll();
 
         private static void Validate(T obj, IValidator<T> validator)
         {
